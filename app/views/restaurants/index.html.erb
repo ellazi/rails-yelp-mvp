@@ -1,0 +1,12 @@
+<h1>Restaurants</h1>
+<div class="card-container">
+    <% @restaurants.each do |r| %>
+    <div class="card">
+      <p class="name"><%= r.name %></p>
+      <p><%= r.address %></p>
+      <p><%= r.phone_number %></p>
+      <p class="category"><%= r.category %></p>
+    </div>
+    <% end %>
+</div>
+<%= link_to "Add a new restaurant", new_restaurant_path, class: "btn btn-primary"%>
